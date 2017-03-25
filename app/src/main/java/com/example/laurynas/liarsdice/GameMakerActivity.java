@@ -2,6 +2,7 @@ package com.example.laurynas.liarsdice;
 
 import android.app.ListActivity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -51,5 +52,9 @@ public class GameMakerActivity extends ListActivity {
         });
 
         builder.show();
+    }
+    public void toGame(View view){
+        Intent intent = new Intent(this, GameActivity.class);
+        startActivity(intent);
     }
 }

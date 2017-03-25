@@ -47,8 +47,8 @@
         android:layout_height="wrap_content"
         android:text="Start game"
         android:id="@+id/button3"
-        android:onClick="onCreatePlayer"
         android:layout_below="@android:id/list"
         android:layout_alignRight="@android:id/list"
-        android:layout_alignEnd="@android:id/list" />
+        android:layout_alignEnd="@android:id/list"
+        android:onClick="toGame" />
 </RelativeLayout>
