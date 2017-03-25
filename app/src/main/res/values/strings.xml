@@ -2,4 +2,5 @@
     <string name="app_name">Liar\'s dice</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_game_maker">GameMakerActivity</string>
+    <string name="title_activity_game">GameActivity</string>
 </resources>

@@ -21,6 +21,10 @@
         <activity
             android:name=".GameMakerActivity"
             android:label="@string/title_activity_game_maker"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GameActivity"
+            android:label="@string/title_activity_game"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
