@@ -35,7 +35,8 @@
         android:layout_alignParentStart="true"
         android:textSize="25dp"
         android:layout_toLeftOf="@+id/button5"
-        android:layout_toStartOf="@+id/button5" />
+        android:layout_toStartOf="@+id/button5"
+        android:onClick="onLiar" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,7 +58,8 @@
         android:textSize="25dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="onCall" />
 
     <com.example.laurynas.liarsdice.NumberPicker
         android:layout_width="wrap_content"

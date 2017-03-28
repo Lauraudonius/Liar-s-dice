@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,7 @@ public class GameMakerActivity extends ListActivity {
     }
 
     private List<String> players = new ArrayList<>();
+    String string = "";
     public void onCreatePlayer(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Player's name");
@@ -40,6 +42,7 @@ public class GameMakerActivity extends ListActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 players.add(input.getText().toString());
+                string += input.getText().toString() + "\n\n\n\n";
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_activated_1,players );
                 getListView().setAdapter(arrayAdapter);
             }
@@ -55,6 +58,10 @@ public class GameMakerActivity extends ListActivity {
     }
     public void toGame(View view){
         Intent intent = new Intent(this, GameActivity.class);
-        startActivity(intent);
+        intent.putExtra("Players", string);
+        intent.putExtra("Number", players.size());
+        if(!(players.size() == 0)) {
+            startActivity(intent);
+        }else Toast.makeText(getApplicationContext(), "0 players in the game", Toast.LENGTH_SHORT).show();
     }
 }
